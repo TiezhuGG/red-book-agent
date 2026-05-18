@@ -7,6 +7,9 @@ ENV PIP_INDEX_URL=https://mirrors.aliyun.com/pypi/simple/
 ENV PIP_TRUSTED_HOST=mirrors.aliyun.com
 ENV PIP_TIMEOUT=120
 
+# 替换Debian软件源为国内镜像
+RUN sed -i 's/deb.debian.org/mirrors.aliyun.com/g' /etc/apt/sources.list
+
 # 安装系统依赖（用于编译某些Python包）
 RUN apt-get update && apt-get install -y --no-install-recommends \
     gcc \
