@@ -4,14 +4,15 @@ WORKDIR /app
 
 # 设置 npm 镜像为国内源，加速安装
 ENV NPM_CONFIG_REGISTRY=https://registry.npmmirror.com
+ENV NPM_CONFIG_FUND=false
 
-# 安装必要的系统依赖（用于某些 npm 包的编译）
-RUN apk add --no-cache git python3 make g++
+# 安装必要的系统依赖（git 用于某些 npm 包）
+RUN apk add --no-cache git
 
 # 先复制 package.json，利用 Docker 缓存
 COPY package*.json ./
 
-# 使用 npm install 代替 npm ci，更健壮
+# 使用 npm install 安装依赖
 RUN npm install
 
 # 复制项目文件
