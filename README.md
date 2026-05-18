@@ -36,7 +36,7 @@
 
 ```bash
 # 克隆项目
-git clone https://github.com/jiangmuran/noterx.git && cd noterx
+git clone git@github.com:TiezhuGG/red-book-agent.git
 
 # 配置环境变量
 cp .env.example backend/.env
@@ -97,6 +97,3 @@ noterx/
 └── README.md
 ```
 
-## License
-
-Apache License 2.0
