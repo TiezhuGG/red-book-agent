@@ -605,7 +605,7 @@ export default function Home() {
               <Typography sx={{ color: "#fff", fontSize: 10, fontWeight: 800, fontFamily: "Inter" }}>Rx</Typography>
             </Box>
             <Typography sx={{ fontSize: 14, fontWeight: 800, color: "#262626", letterSpacing: "-0.02em" }}>
-              红薯医生
+              🍠红薯医生
             </Typography>
           </Box>
         </Box>
