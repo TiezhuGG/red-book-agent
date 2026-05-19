@@ -25,7 +25,7 @@ export default function Landing() {
             }}
           >
             <Typography sx={{ fontSize: 12, fontWeight: 600, color: "#ff2442" }}>
-              红薯医生
+              红薯医生🍠
             </Typography>
           </Box>
         </motion.div>
