@@ -32,8 +32,9 @@ services:
       context: ./frontend
       dockerfile: Dockerfile
     container_name: redbook-frontend
-    ports:
-      - "127.0.0.1:8100:80"
+    # 不对外暴露端口，只在内部网络通信
+    expose:
+      - "80"
     depends_on:
       - backend
     networks:
@@ -44,8 +45,7 @@ services:
     image: nginx:alpine
     container_name: redbook-nginx
     ports:
-      - "80:80"
-      - "443:443"
+      - "8082:80"
     volumes:
       - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
       - ./nginx/conf.d:/etc/nginx/conf.d:ro
