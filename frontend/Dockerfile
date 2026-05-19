@@ -2,6 +2,9 @@ FROM node:20-alpine AS build
 
 WORKDIR /app
 
+# 【关键】替换 Alpine 软件源为阿里云（极速下载）
+RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories
+
 # 设置 npm 镜像为国内源，加速安装
 ENV NPM_CONFIG_REGISTRY=https://registry.npmmirror.com
 ENV NPM_CONFIG_FUND=false
