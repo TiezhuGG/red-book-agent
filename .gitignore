@@ -3,10 +3,12 @@ node_modules/
 frontend/node_modules/
 
 # Build
+frontend/dist/
 __pycache__/
 *.pyc
 *.pyo
 *.egg-info/
+dist/
 build/
 
 # Environment
