@@ -597,15 +597,15 @@ export default function Home() {
       }}>
         <Box sx={{ display: "flex", alignItems: "center", gap: { xs: 0.75, md: 1.5 } }}>
           <Box sx={{ display: "flex", alignItems: "center", gap: 0.75, flexShrink: 0 }}>
-            <Box sx={{
+            {/* <Box sx={{
               width: 24, height: 24, borderRadius: "6px",
               background: "linear-gradient(135deg, #ff5c6f, #e61e3d)",
               display: "flex", alignItems: "center", justifyContent: "center",
             }}>
               <Typography sx={{ color: "#fff", fontSize: 10, fontWeight: 800, fontFamily: "Inter" }}>Rx</Typography>
-            </Box>
+            </Box> */}
             <Typography sx={{ fontSize: 14, fontWeight: 800, color: "#262626", letterSpacing: "-0.02em" }}>
-              🍠红薯医生
+              红薯医生
             </Typography>
           </Box>
         </Box>
